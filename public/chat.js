@@ -19,6 +19,7 @@
         window.facilioApp.on("app.loaded", (data) => {
           this.username = window.facilioApp.getCurrentUser().email;
           this.registerUser();
+          window.facilioApp.interface.trigger("open");
         });
       },
   
