@@ -17,9 +17,10 @@
       created: function() {
         window.facilioApp = FacilioAppSDK.init();
         window.facilioApp.on("app.loaded", (data) => {
-          this.username = window.facilioApp.getCurrentUser().email;
-          this.registerUser();
-          window.facilioApp.interface.trigger("open");
+            let isTenantPortal = data.currentUser.appDomain.appDomainTypeEnum == "TENANT_PORTAL";
+            this.username = isTenantPortal ? 'Tenant' : 'Technician';
+            this.registerUser();
+            window.facilioApp.interface.trigger("open");
         });
       },
   
