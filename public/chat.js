@@ -71,7 +71,7 @@
           // If it already exists, join instead
           try {
             const newConversation = await this.conversationsClient.createConversation(
-              { uniqueName: "faciliochat" }
+              { uniqueName: "Tenant_Technician" }
             );
             const joinedConversation = await newConversation
               .join()
@@ -85,7 +85,7 @@
             this.activeConversation = joinedConversation;
           } catch {
             this.activeConversation = await this.conversationsClient.getConversationByUniqueName(
-              "faciliochat"
+              "Tenant_Technician"
             );
           }
   
