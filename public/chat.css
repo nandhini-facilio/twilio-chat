@@ -23,20 +23,18 @@ body {
     text-align: center;
     background: aliceblue;
     border: 1px solid #EBEEF5;
-    min-height: 400px;
+    height: 340px;
     overflow: scroll;
-    padding-bottom: 55px;
 }
 input {
-    padding: 12px 20px;
-    margin: 8px;
+    padding: 12px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    width: 250px;
     position: fixed;
-    bottom: 20px;
+    bottom: 50px;
+    width: 260px;
 }
 .bubble-container {
     text-align: left;
