@@ -35,7 +35,7 @@
               case "connected":
                 this.statusString = "You are connected.";
                 this.isConnected = true;
-                await this.createConversation();
+                this.createConversation();
                 break;
               case "disconnecting":
                 this.statusString = "Disconnecting from Twilio…";
