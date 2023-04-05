@@ -60,7 +60,8 @@
         createConversation: async function() {
           // Ensure User1 and User2 have an open client session
           try {
-            await this.conversationsClient.getUser(this.username);
+            await this.conversationsClient.getUser('nandhini+integration@facilio.com');
+            await this.conversationsClient.getUser('nandhini+integration1@facilio.com');
           } catch {
             console.error("Waiting for User1 and User2 client sessions");
             return;
