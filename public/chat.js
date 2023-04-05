@@ -59,18 +59,18 @@
         },
         createConversation: async function() {
           // Ensure User1 and User2 have an open client session
-          try {
-            await this.conversationsClient.getUser('nandhini+integration@facilio.com');
-            await this.conversationsClient.getUser('nandhini+integration1@facilio.com');
-          } catch {
-            console.error("Waiting for User1 and User2 client sessions");
-            return;
-          }
+        //   try {
+        //     await this.conversationsClient.getUser('nandhini+integration@facilio.com');
+        //     await this.conversationsClient.getUser('nandhini+integration1@facilio.com');
+        //   } catch {
+        //     console.error("Waiting for User1 and User2 client sessions");
+        //     return;
+        //   }
           // Try to create a new conversation and add User1 and User2
           // If it already exists, join instead
           try {
             const newConversation = await this.conversationsClient.createConversation(
-              { uniqueName: "chat" }
+              { uniqueName: "faciliochat" }
             );
             const joinedConversation = await newConversation
               .join()
@@ -84,7 +84,7 @@
             this.activeConversation = joinedConversation;
           } catch {
             this.activeConversation = await this.conversationsClient.getConversationByUniqueName(
-              "chat"
+              "faciliochat"
             );
           }
   
