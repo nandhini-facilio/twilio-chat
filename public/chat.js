@@ -61,8 +61,8 @@
         createConversation: async function() {
           // Ensure User1 and User2 have an open client session
         //   try {
-        //     await this.conversationsClient.getUser('nandhini+integration@facilio.com');
-        //     await this.conversationsClient.getUser('nandhini+integration1@facilio.com');
+        //     await this.conversationsClient.getUser('Tenant');
+        //     await this.conversationsClient.getUser('Technician');
         //   } catch {
         //     console.error("Waiting for User1 and User2 client sessions");
         //     return;
@@ -77,10 +77,10 @@
               .join()
               .catch((err) => console.log(err));
             await joinedConversation
-              .add('nandhini+integration@facilio.com')
+              .add('Tenant')
               .catch((err) => console.log("error: ", err));
             await joinedConversation
-              .add('nandhini+integration1@facilio.com')
+              .add('Technician')
               .catch((err) => console.log("error: ", err));
             this.activeConversation = joinedConversation;
           } catch {
