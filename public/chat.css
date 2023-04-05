@@ -11,7 +11,10 @@ li {
 a {
     color: #42b983;
 }
-
+body {
+    padding: 0;
+    margin: 0;
+}
 #conversation {
     font-family: Helvetica, sans-serif;
     padding: 0;
@@ -24,13 +27,13 @@ a {
 }
 input {
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 8px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     margin-right: 5px;
-    width: 300px;
+    width: 270px;
 }
 .bubble-container {
     text-align: left;
