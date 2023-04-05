@@ -1,0 +1,74 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+a {
+    color: #42b983;
+}
+
+#conversation {
+    font-family: Helvetica, sans-serif;
+    padding: 0;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    background: aliceblue;
+    border: 1px solid #EBEEF5;
+    min-height: 400px;
+}
+input {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-right: 5px;
+    width: 300px;
+}
+.bubble-container {
+    text-align: left;
+}
+
+.bubble {
+    border: 2px solid #f1f1f1;
+    background-color: #fdfbfa;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 230px;
+    float: right;
+}
+
+.myMessage .bubble {
+    background-color: #abf1ea;
+    border: 2px solid #87E0D7;
+    float: left;
+}
+
+.name {
+    padding-right: 8px;
+    font-size: 11px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

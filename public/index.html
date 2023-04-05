@@ -4,14 +4,40 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="stylesheet" href="chat.css">
+    <script type="text/javascript" src="https://static.facilio.com/apps-sdk/latest/facilio_apps_sdk.min.js"></script>
+    <script src="//media.twiliocdn.com/sdk/js/conversations/v2.3/twilio-conversations.min.js"></script>
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <div id="app">
+      <div id="chat">
+        <!-- <h1>Welcome to the Vue chat app<span v-if="nameRegistered">, {{ name }}</span>!</h1>
+        <p>{{ statusString }}</p>
+        <div v-if="!nameRegistered">
+          <input @keyup.enter="registerName" v-model="name" placeholder="Enter your name">
+          <button @click="registerName">Register name</button>
+        </div>
+        <div v-if="nameRegistered && !activeConversation && isConnected">
+          <button @click="createConversation">Join chat</button>
+        </div> -->
+        <div id="conversation">
+          <div class="conversation-container">
+            <div v-for="message in messages" :key="message.index" class="bubble-container"
+              :class="{ myMessage: message?.state?.author === name }">
+              <div class="bubble">
+                <div class="name">{{ message?.state?.author }}:</div>
+                <div class="message">{{ message?.state?.body }}</div>
+              </div>
+            </div>
+          </div>
+          <div class="input-container">
+            <input @keyup.enter="sendMessage" v-model="messageText" placeholder="Enter your message">
+          </div>
+        </div>
+        <Conversation v-if="activeConversation" :active-conversation="activeConversation" :name="name" />
+      </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
+    <script src="chat.js"></script>
   </body>
 </html>
