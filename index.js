@@ -8,8 +8,6 @@ app.use(express.static(__dirname + "/public"));
 app.use(urlencoded({ extended: false }));
 app.use(cors());
 
-const port = 3000;
-
 const AccessToken = require("twilio").jwt.AccessToken;
 const ChatGrant = AccessToken.ChatGrant;
 
@@ -47,6 +45,9 @@ app.get("/auth/user/:user", (req, res) => {
   res.send({ token: jwt });
 });
 
+let port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
+
+module.exports = app;
