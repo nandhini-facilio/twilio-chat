@@ -47,34 +47,18 @@ input {
     background-color: #fdfbfa;
     border-radius: 5px;
     padding: 10px;
-    margin: 10px 0;
+    margin: 5px 0;
     width: 230px;
     float: right;
+    margin-right: 5px;
 }
 
 .myMessage .bubble {
-    background-color: #abf1ea;
-    border: 2px solid #87E0D7;
+    margin-left: 5px;
     float: left;
 }
 
 .name {
     padding-right: 8px;
     font-size: 11px;
-}
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #888;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
 }

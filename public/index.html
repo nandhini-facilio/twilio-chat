@@ -23,7 +23,7 @@
         <div id="conversation">
           <div class="conversation-container">
             <div v-for="message in messages" :key="message.index" class="bubble-container"
-              :class="{ myMessage: message?.state?.author === name }">
+              :class="{ myMessage: message?.state?.author === username }">
               <div class="bubble">
                 <div class="name">{{ message?.state?.author }}:</div>
                 <div class="message">{{ message?.state?.body }}</div>
