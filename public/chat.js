@@ -35,6 +35,7 @@
               case "connected":
                 this.statusString = "You are connected.";
                 this.isConnected = true;
+                await this.createConversation();
                 break;
               case "disconnecting":
                 this.statusString = "Disconnecting from Twilio…";
@@ -55,7 +56,6 @@
         },
         registerUser: async function() {
           await this.initConversationsClient();
-          await this.createConversation()
         },
         createConversation: async function() {
           // Ensure User1 and User2 have an open client session
