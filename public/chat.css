@@ -24,6 +24,8 @@ body {
     background: aliceblue;
     border: 1px solid #EBEEF5;
     min-height: 400px;
+    overflow: scroll;
+    padding-bottom: 55px;
 }
 input {
     padding: 12px 20px;
