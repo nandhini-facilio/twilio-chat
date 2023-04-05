@@ -76,10 +76,10 @@
               .join()
               .catch((err) => console.log(err));
             await joinedConversation
-              .add("User1")
+              .add('nandhini+integration@facilio.com')
               .catch((err) => console.log("error: ", err));
             await joinedConversation
-              .add("User2")
+              .add('nandhini+integration1@facilio.com')
               .catch((err) => console.log("error: ", err));
             this.activeConversation = joinedConversation;
           } catch {
