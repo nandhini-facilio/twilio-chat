@@ -34,8 +34,9 @@ input {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    margin-right: 5px;
-    width: 270px;
+    width: 250px;
+    position: fixed;
+    bottom: 20px;
 }
 .bubble-container {
     text-align: left;
