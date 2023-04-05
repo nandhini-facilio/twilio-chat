@@ -55,12 +55,12 @@
         },
         registerUser: async function() {
           await this.initConversationsClient();
+          await this.createConversation()
         },
         createConversation: async function() {
           // Ensure User1 and User2 have an open client session
           try {
-            await this.conversationsClient.getUser("User1");
-            await this.conversationsClient.getUser("User2");
+            await this.conversationsClient.getUser(this.username);
           } catch {
             console.error("Waiting for User1 and User2 client sessions");
             return;
